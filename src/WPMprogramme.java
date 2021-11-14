@@ -2,6 +2,7 @@ import java.time.LocalTime;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
+
 public class WPMprogramme {
     public static void main(String[] args) throws InterruptedException {
 
@@ -14,9 +15,8 @@ public class WPMprogramme {
         System.out.println(" .");
         TimeUnit.SECONDS.sleep(1);
         Random rand = new Random();
-        for (int i = 0; i < 14; i++)
-        {
-            System.out.print(words [rand.nextInt(32)] + " ");
+        for (int i = 0; i < 14; i++) {
+            System.out.print(words[rand.nextInt(32)] + " ");
 
         }
         System.out.println();
@@ -31,7 +31,7 @@ public class WPMprogramme {
         int numChars = typedwords.length();
         // gross wpm = (all-typed-entries/5)/time(minute)
 
-        int wmp = (int)(( ( (double) numChars/5)/seconds )*60);
-
+        int wpm = (int) ((((double) numChars / 5) / seconds) * 60);
+        System.out.println("You Score is : " + wpm + "!");
     }
 }
